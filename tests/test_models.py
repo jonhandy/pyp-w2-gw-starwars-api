@@ -66,7 +66,7 @@ class FilmsQuerySetTestCase(BaseStarWarsAPITestCase):
     @responses.activate
     def test_films_qs_next(self):
         qs = Films.all()
-        obj = qs.next
+        obj = qs.next()
         self.assertTrue(isinstance(obj, Films))
         self.assertEqual(obj.title, 'A New Hope')
 
